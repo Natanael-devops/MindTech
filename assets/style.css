@@ -1,21 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
 
-header img {
+:root{
+  --branco: #fff;
+  --preto1: #272727;
+  --preto2: #2d2d2d;
+  --preto3: #414141;
+  --preto4: #1c1c1c;
+  --preto5: #343434;
+  --azulneon: rgba(0,128,128,1);
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--preto1);
+  color: var(--branco);
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+
+.imagem-logo img{
     width: 200px;
     height: auto;
 }
 
-body {
-    background-color: rgba(255,250,250, 1);
+header, .barra-navegacao {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.caixa-cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+  background-color: var(--preto2);
+  box-shadow: 1px 1px 4px var(--preto4);
+  height: 90px;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+
+.barra-navegacao {
+  gap: 3em;
+}
+
+.barra-navegacao a{
+  text-decoration: none;
+  color: var(--azulneon);
+  transition: 1s;
+  font-weight: bold;
+}
+
+.botao-header {
+  background-color: transparent;
+  border: none;
+  color: var(--branco);
+  cursor: pointer;
+
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .botao-header{
+    display: block;
   }
-  
-  .links-cabecalho {
-    display: flex;
-    align-items: center;
+  .barra-navegacao{
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    background-color: var(--preto5);
+    height: 100%;
+    width: 35vw;
+    padding: 1em;
+    animation-duration: 1s;
+    margin-left: -100vw;
+  }
+  @keyframes aparecerSideBar {
+    from {margin-left: -100vw;}
+    top {margin-left: -10vw;}
   }
 
+}
