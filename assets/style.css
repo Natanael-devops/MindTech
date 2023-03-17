@@ -44,6 +44,7 @@ header {
 
 .barra-navegacao {
   gap: 3em;
+  z-index: 2;
 }
 
 .barra-navegacao a{
