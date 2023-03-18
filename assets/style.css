@@ -165,8 +165,9 @@ ul {
   height: auto;
 }
 
-.programador h3 {
+.programador h3, .programador h4, .programador p {
   margin: 10px 0;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
