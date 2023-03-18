@@ -24,7 +24,9 @@ import (
 func CarregarRotas() {
 	r := gin.Default()
 	r.Static("/assets", "./assets")
+	r.Static("/js", "./js")
 	r.LoadHTMLGlob("templates/*")
+
 	//templ := template.Must(template.New("").ParseFS(tmplEmbed, "templates/*.html"))
 	//r.SetHTMLTemplate(templ)
 
