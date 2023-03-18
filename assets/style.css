@@ -63,6 +63,102 @@ header {
   display: none;
 }
 
+h1 {
+  text-align: center;
+  font-size: calc(1.375rem + 1.5vw);
+  font-weight: 600;
+  padding: 50px 0;
+}
+
+h3{
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.conteudo p {
+  text-align: center;
+  padding: 10px 30%;
+}
+
+span {
+  font-weight: 600;
+  color: var(--azulneon);
+}
+
+.caixa-solucoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--preto5);
+}
+
+.lista-icones {
+  display: flex;
+}
+
+.caixa-solucoes img{
+  width: 200px;
+  height: auto;
+}
+
+.caixa-solucoes h1 {
+  padding: 15px;
+}
+
+.coluna{
+  display:flex;
+  flex-direction: column;
+  width: 23%;
+  align-items: center;
+  margin: 0 10px;
+  padding: 10px 10px;
+}
+
+.coluna img {
+  display: flex;
+  align-self: center;
+  background: var(--branco);
+  border-radius: 45px;
+  padding: 10px 15px;
+  margin: 10px 0;
+}
+
+.botao-conhecer {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 7.5px 15px;
+  border-radius: 10px;
+  background: var(--azulneon);
+  color: var(--branco);
+}
+
+.caixa-desenvolvedores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--preto1);
+}
+
+.lista-desenvolvedores {
+  display: flex;
+  flex-direction: row;
+}
+
+.programador {
+  display:flex;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+  margin: 0 10px;
+  padding: 10px 10px;
+}
+
+.programador img {
+  width: 200px;
+  height: auto;
+}
+
 @media screen and (max-width: 768px) {
   .botao-header{
     display: block;
