@@ -95,6 +95,7 @@ span {
 
 .lista-icones {
   display: flex;
+  flex-direction: row;
 }
 
 .caixa-solucoes img{
@@ -174,6 +175,13 @@ span {
     animation-duration: 1s;
     margin-left: -100vw;
   }
+
+  .lista-icones, .lista-desenvolvedores {
+    flex-direction: column;
+    padding: 40px 40px;
+    align-items: center;
+  }
+
   @keyframes aparecerSideBar {
     from {margin-left: -100vw;}
     top {margin-left: -10vw;}
