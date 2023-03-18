@@ -194,6 +194,11 @@ ul {
     margin-left: -100vw;
   }
 
+  .programador {
+    width: 70%;
+    margin-top: 50px;
+  }
+
   .lista-icones, .lista-desenvolvedores {
     flex-direction: column;
     padding: 60px 40px;
