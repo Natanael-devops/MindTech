@@ -195,8 +195,12 @@ ul {
   }
 
   .programador {
-    width: 70%;
+    width: 80%;
     margin-top: 50px;
+  }
+
+  .programador img {
+    margin-top: 10px;
   }
 
   .lista-icones, .lista-desenvolvedores {
