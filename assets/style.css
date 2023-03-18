@@ -81,9 +81,13 @@ h3{
   padding: 10px 30%;
 }
 
-span {
+span, ul {
   font-weight: 600;
   color: var(--azulneon);
+}
+
+ul {
+  text-align: center;
 }
 
 .caixa-solucoes {
@@ -153,11 +157,16 @@ span {
   align-items: center;
   margin: 0 10px;
   padding: 10px 10px;
+  text-align: center;
 }
 
 .programador img {
   width: 200px;
   height: auto;
+}
+
+.programador h3 {
+  margin: 10px 0;
 }
 
 @media screen and (max-width: 768px) {
