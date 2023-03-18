@@ -178,7 +178,7 @@ span {
 
   .lista-icones, .lista-desenvolvedores {
     flex-direction: column;
-    padding: 40px 40px;
+    padding: 60px 40px;
     align-items: center;
   }
 
