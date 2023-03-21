@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="title" content="Consultoria em Sistemas">
+        <meta name="author" content="MindTech">
+        <meta name="keywords" content="Sistemas, Site, Consultoria, Desenvolvedores, Programação">
+        <link rel="stylesheet" href="../assets/reset.css">
+        <link rel="stylesheet" href="../assets/contato.css">
+        <link rel="shortcut icon" href="../assets/logo.png">
+        
+        <title>Contato - MindTech</title>
+</head>
+
+<body>
+    <header id="header">
+        <div>
+            <button onclick="mudarSideBar()" class="botao-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+            </button>
+        </div>
+        <div class="imagem-logo">
+            <img src="../assets/logo-principal.png" alt="Logo da empresa, imagem de um cérebro tecnológico.">
+        </div>
+        <div class="barra-navegacao" id="barra">
+            <button onclick="mudarSideBar()" class="botao-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+            </button>
+            <a href="/">Home</a>
+            <a href="/quemsomos">Quem Somos</a>
+            <a href="/contato">Contato</a>
+        </div>
+    </header>
+
+	<main onclick="fecharSideBar()" class="conteudo" id="conteudo">
+		
+        <div class="container-contato">
+            
+                <form action="" class="container-texto-contato">
+                    <h1>Deixe seu nome e telefone e entraremos em contato!</h1>
+                    <label for="name">
+                        <span>Nome</span>
+                        <input type="text" id="name" name="name">
+                    </label>
+
+                    <label for="email">
+                        <span>E-mail</span>
+                        <input type="email" id="email" name="email">
+                    </label>
+
+                    <label for="telefone">
+                    <span>Telefone</span>
+                    <input type="tel" id="tel" name="telefone">
+                    </label>
+
+                    <input type="submit" value="Enviar!" id="button">
+                </form>
+            
+
+            <div class="imagem-contato">
+                <img src="../assets/logo01.png" alt="">
+            </div>
+        </div>
+	</main>
+
+    <footer class="footer">
+
+
+        <div class="texto-footer">
+            <h3><span>ATENDIMENTO</span></h3>
+            <hr>
+    
+            <div class="container-atendimento">
+                <div class="texto-imagem">
+                    <img src="../assets/whatsapp.svg" alt="Logo do whatsapp com a cor azul.">
+                    <h4>(67)9 8206-6441</h4>
+                </div>
+        
+                <div class="texto-imagem">
+                        <img src="../assets/envelope.svg" alt="Logo de um envelope com a cor azul, para representar um e-mail.">
+                        <h4>contato@mindtech.com</h4>
+                        <br>
+                </div>
+    
+                <h4 class="copyright"><span>©</span>  MindTech Sistemas - Desenvolvimento Web em Gravataí</h4>
+                <img class="logo-footer" src="../assets/branco.png" alt="Logo da empresa, imagem de um cérebro teconlógico.">
+        </div>
+    
+       
+    
+    
+    
+        </div>
+    
+    </footer>
+	
+</body>
+
+
+
+</html>

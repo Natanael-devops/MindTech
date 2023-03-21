@@ -219,28 +219,61 @@ ul {
   flex-direction: row;
 }
 
-.text-quemsomos {
+.container-contato {
+    display: flex;
+    flex-direction: row;
+}
+.container-texto-contato {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 50px;
     width: 50%;
 }
+.container-contato label span {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+.container-texto-contato input {
+    background: var(--preto3);
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    color: rgba(166, 166, 166);
+    font-size: 1rem;
+    border: 1px solid #040B18;
+    border-radius: 8px;
+}
+
+.container-texto-contato input[type="submit"] {
+    cursor: pointer;
+    width: 50%;
+    margin-top: 4rem;
+    border: none;
+    border-radius: 32px;
+    background: var(--azulneon);
+    color: white;
+    font-size: 1.1rem;
+    transition: all .3s ease-in-out;
+}
+
+.container-texto-contato input[type="submit"]:hover {
+    background: var(--preto2);
+}
 
 .imagem-contato {
-  width: 50%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding: 4rem;
+    width: 50vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 4rem;
 }
 
 .imagem-contato img {
-  width: 60%;
-}
-
-.lema p {
-  font: italic;
+    width: 60%;
 }
 
 
