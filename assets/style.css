@@ -147,6 +147,7 @@ ul {
   align-items: center;
   background-color: var(--preto1);
   box-shadow: 1px 1px 4px var(--preto4);
+  padding-bottom: 20px;
 }
 
 .lista-desenvolvedores {
@@ -171,11 +172,46 @@ ul {
 .programador img {
   width: 200px;
   height: 200px;
+  border-radius: 45px;
 }
 
 .programador h3, .programador h4, .programador p {
   margin: 10px 0;
   text-align: center;
+}
+
+.footer {
+  padding: 10% 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--preto2);
+  box-shadow: -1px -1px 4px var(--preto4);
+}
+
+.container-atendimento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.texto-imagem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
+}
+.texto-imagem img {
+  padding-right: 5px;
+}
+
+.copyright {
+  padding-top: 20px;
+}
+
+.logo-footer {
+  padding-top: 30px;
+  width: 150px;
 }
 
 @media screen and (max-width: 768px) {
@@ -208,6 +244,7 @@ ul {
     padding: 60px 40px;
     align-items: center;
   }
+
 
   @keyframes aparecerSideBar {
     from {margin-left: -100vw;}
