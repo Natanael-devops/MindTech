@@ -45,14 +45,11 @@ func SalvarContato(c *gin.Context) {
 				"Telefone": contato.Telefone,
 				"Email":    contato.Email,
 			})
+			return
 		}
 
 		database.DB.Create(&contato)
-		c.HTML(http.StatusOK, "resultado.html", gin.H{
-			"Nome":     contato.Nome,
-			"Telefone": contato.Telefone,
-			"Email":    contato.Email,
-		})
+		c.HTML(http.StatusOK, "index.html", nil)
 
 	}
 }
