@@ -26,9 +26,19 @@ func RotaNaoEncontrada(c *gin.Context) {
 
 func SalvarContato(c *gin.Context) {
 	contato := models.Contato{}
+
+	nome := c.PostForm("nome")
+	email := c.PostForm("email")
+	telefone := c.PostForm("telefone")
+
 	database.DB.Where(&models.Contato{Telefone: contato.Telefone}).First(&contato.Telefone)
 
 	if contato.ID == 0 {
+
+		contato.Nome = nome
+		contato.Email = email
+		contato.Telefone = telefone
+
 		if contato.Nome == "" || contato.Telefone == "" {
 			c.AbortWithStatus(http.StatusBadRequest)
 			return

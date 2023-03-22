@@ -7,9 +7,9 @@ import (
 
 type Contato struct {
 	gorm.Model
-	Nome     string `form:"nome" validate:"nonzero"`
-	Telefone string `form:"telefone" validate:"nonzero"`
-	Email    string `form:"email" validate:"nonzero"`
+	Nome     string `json:"nome" validate:"nonzero"`
+	Telefone string `json:"telefone" validate:"nonzero"`
+	Email    string `json:"email" validate:"nonzero"`
 }
 
 func ValidarNome(nome *Contato) error {
