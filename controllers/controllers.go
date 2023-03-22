@@ -40,8 +40,11 @@ func SalvarContato(c *gin.Context) {
 		contato.Telefone = telefone
 
 		if contato.Nome == "" || contato.Telefone == "" {
-			c.AbortWithStatus(http.StatusBadRequest)
-			return
+			c.HTML(http.StatusOK, "resultado.html", gin.H{
+				"Nome":     contato.Nome,
+				"Telefone": contato.Telefone,
+				"Email":    contato.Email,
+			})
 		}
 
 		database.DB.Create(&contato)
