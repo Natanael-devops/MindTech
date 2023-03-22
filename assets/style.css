@@ -275,6 +275,22 @@ ul {
     align-items: center;
   }
 
+  .container-quemsomos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagem-contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .imagem-contato img {
+    width: 220px;
+    height: auto;
+  }
+
 
   @keyframes aparecerSideBar {
     from {margin-left: -100vw;}

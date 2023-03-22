@@ -308,6 +308,29 @@ ul {
     align-items: center;
   }
 
+  .container-contato {
+    flex-direction: column;
+  }
+
+  .conteudo {
+    width: 100%;
+  }
+  .container-texto-contato {
+    width: 80%;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-texto-contato input {
+    width: 80%;
+  }
+
+  .imagem-contato {
+    display: flex;
+    justify-content: center;
+  }
+
 
   @keyframes aparecerSideBar {
     from {margin-left: -100vw;}
