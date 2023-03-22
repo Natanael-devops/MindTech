@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/Natanael-devops/MindTech/controllers"
+	"github.com/Natanael-devops/MindTech/database"
 	"github.com/gin-gonic/gin"
 )
 
@@ -35,6 +36,7 @@ func CarregarRotas() {
 	r.GET("/", controllers.PaginaIndex)
 	r.GET("/contato", controllers.PaginaContato)
 	r.GET("/quemsomos", controllers.PaginaQuemSomos)
+	r.POST("/contato", controllers.SalvarContato)
 
 	r.NoRoute(controllers.RotaNaoEncontrada)
 
@@ -43,4 +45,5 @@ func CarregarRotas() {
 
 func main() {
 	CarregarRotas()
+	database.ConectaComBancoDeDados()
 }
