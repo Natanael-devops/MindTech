@@ -40,7 +40,7 @@ func CarregarRotas() {
 
 	r.NoRoute(controllers.RotaNaoEncontrada)
 
-	r.Run(":7000")
+	r.Run(":10000")
 }
 
 func main() {
