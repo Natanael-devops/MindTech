@@ -14,11 +14,13 @@ var (
 )
 
 func ConectaComBancoDeDados() {
-	stringDeConexao := "host=dpg-cesp9h82i3mh51vbsk00-a user=nate password=ujEUxrtXbBSH3kNZeyVLLY0I46hUPd3h dbname=freshair port=5432 sslmode=disable"
-	DB, err = gorm.Open(postgres.Open(stringDeConexao))
+	dsn := "postgres://nate:ujEUxrtXbBSH3kNZeyVLLY0I46hUPd3h@dpg-cesp9h82i3mh51vbsk00-a/freshair"
+	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Panic("Erro ao conectar com banco de dados")
 	}
+
+	// Verifica se a conexão com o banco de dados está funcionando
 
 	DB.AutoMigrate(&models.Contato{})
 

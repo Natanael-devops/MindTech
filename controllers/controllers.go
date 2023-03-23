@@ -31,25 +31,31 @@ func SalvarContato(c *gin.Context) {
 	email := c.PostForm("email")
 	telefone := c.PostForm("telefone")
 
-	database.DB.Where(&models.Contato{Telefone: contato.Telefone}).First(&contato.Telefone)
+	contato.Nome = nome
+	contato.Email = email
+	contato.Telefone = telefone
 
-	if contato.ID == 0 {
+	database.DB.Create(&contato)
 
-		contato.Nome = nome
-		contato.Email = email
-		contato.Telefone = telefone
+	//database.DB.Where(&models.Contato{Telefone: telefone}).First(&telefone)
 
-		if contato.Nome == "" || contato.Telefone == "" {
-			c.HTML(http.StatusOK, "resultado.html", gin.H{
-				"Nome":     contato.Nome,
-				"Telefone": contato.Telefone,
-				"Email":    contato.Email,
-			})
-			return
-		}
+	/*if contato.ID == 0 {
 
-		database.DB.Create(&contato)
-		c.HTML(http.StatusOK, "index.html", nil)
+	contato.Nome = nome
+	contato.Email = email
+	contato.Telefone = telefone
 
+	if contato.Nome == "" || contato.Telefone == "" {
+		c.HTML(http.StatusOK, "resultado.html", gin.H{
+			"Nome":     contato.Nome,
+			"Telefone": contato.Telefone,
+			"Email":    contato.Email,
+		})
+		return
 	}
+
+	database.DB.Create(&contato)*/
+	c.HTML(http.StatusOK, "index.html", nil)
+
+	//}
 }
