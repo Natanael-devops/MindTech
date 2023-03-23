@@ -35,6 +35,13 @@ func SalvarContato(c *gin.Context) {
 	contato.Email = email
 	contato.Telefone = telefone
 
+	//validações
+	if err := models.ValidarNome(&contato); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"error": err.Error()})
+		return
+	}
+
 	database.DB.Create(&contato)
 
 	//database.DB.Where(&models.Contato{Telefone: telefone}).First(&telefone)
