@@ -15,7 +15,7 @@ var (
 
 func ConectaComBancoDeDados() {
 	dsn := "postgres://nate:ujEUxrtXbBSH3kNZeyVLLY0I46hUPd3h@dpg-cesp9h82i3mh51vbsk00-a/freshair"
-	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	DB, err = gorm.Open(postgres.Open(dsn))
 	if err != nil {
 		log.Panic("Erro ao conectar com banco de dados")
 	}
